@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-	"github.com/jon-torlen/jtwitter.git/bd"
-	"github.com/jon-torlen/jtwitter.git/handlers"
+	"github.com/jon-torlen/jtwitter/bd"
+	"github.com/jon-torlen/jtwitter/handlers"
 )
 
 func main() {

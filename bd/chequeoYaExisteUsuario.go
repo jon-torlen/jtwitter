@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/jon-torlen/jtwitter.git/models"
+	"github.com/jon-torlen/jtwitter/models"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
@@ -14,7 +14,7 @@ func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {
 	defer cancel()
 
 	db := MongoCN.Database("jtwitter")
-	col := db.Collection(""usuarios)
+	col := db.Collection("usuarios")
 
 	condicion := bson.M{"email": email}
 
@@ -23,7 +23,7 @@ func ChequeoYaExisteUsuario(email string) (models.Usuario, bool, string) {
 	err := col.FindOne(ctx, condicion).Decode(&resultado)
 	ID := resultado.ID.Hex()
 	if err != nil {
-		return resultado.false.ID
+		return resultado, false, ID
 	}
 	return resultado, true, ID
 }

@@ -1,4 +1,4 @@
-module github.com/jon-torlen/jtwitter.git
+module github.com/jon-torlen/jtwitter
 
 go 1.15
 

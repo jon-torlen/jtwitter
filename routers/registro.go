@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/jon-torlen/jtwitter.git/bd"
-	"github.com/jon-torlen/jtwitter.git/models"
+	"github.com/jon-torlen/jtwitter/bd"
+	"github.com/jon-torlen/jtwitter/models"
 )
 
 /*Registro es la funcion para crear en la BD el egistro de usuario*/
@@ -33,7 +33,7 @@ func Registro(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	_, status, err := bd.Insertoregistro(t)
+	_, status, err := bd.InsertoRegistro(t)
 	if err != nil {
 		http.Error(w, "Ocurrio un error al intentar realizar el registro de usuario "+err.Error(), 400)
 	}
