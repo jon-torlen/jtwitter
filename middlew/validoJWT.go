@@ -6,7 +6,7 @@ import (
 	"github.com/jon-torlen/jtwitter/routers"
 )
 
-/*ValidoJWT permite validar el JWT que nos viene en al peticion*/
+/*ValidoJWT permite validar el JWT que nos viene en la petición */
 func ValidoJWT(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		_, _, _, err := routers.ProcesoToken(r.Header.Get("Authorization"))

@@ -8,7 +8,7 @@ import (
 	"github.com/jon-torlen/jtwitter/models"
 )
 
-/*Registro es la funcion para crear en la BD el egistro de usuario*/
+/*Registro  es la funcion para crear en la BD el egistro de usuario*/
 func Registro(w http.ResponseWriter, r *http.Request) {
 	var t models.Usuario
 	err := json.NewDecoder(r.Body).Decode(&t)

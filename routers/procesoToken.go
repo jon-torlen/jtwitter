@@ -7,7 +7,6 @@ import (
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/jon-torlen/jtwitter/bd"
 
-	//"github.com/jon-torlen/jtwitter/jwt"
 	"github.com/jon-torlen/jtwitter/models"
 )
 

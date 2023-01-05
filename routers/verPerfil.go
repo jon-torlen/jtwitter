@@ -7,7 +7,7 @@ import (
 	"github.com/jon-torlen/jtwitter/bd"
 )
 
-/*VerPerfil permite extraer los valores del Perfil*/
+/*VerPerfil permite extraer  los valores del Perfil*/
 func VerPerfil(w http.ResponseWriter, r *http.Request) {
 
 	ID := r.URL.Query().Get("id")
